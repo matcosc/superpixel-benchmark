@@ -861,6 +861,10 @@ float EvaluationSummary::computeMean(const std::vector<int> gt, const cv::Mat &d
             }
         }
         
+            mean_min += min;
+            mean_max += max;
+            ++count_0;
+            
         mean_min /= count_0;
         mean_max /= count_0;
     }
